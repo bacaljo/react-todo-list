@@ -24,7 +24,7 @@ code {
   font-size: 16px;
   padding: 10px 20px;
   text-align: left;
-  width: 300px;
+  width: 500px;
 }
 
 .todo-item-text-done {
@@ -54,4 +54,32 @@ code {
 
 .todo-list {
   padding: 20px;
+}
+
+.todo-generator {
+  display: inline-flex;
+}
+
+.todo-generator-text {
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 450px;
+}
+
+.todo-generator-add {
+  background: white;
+  border-style: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 10px 10px;
+  text-align: center;
+  transition: 1s;
+  width: 53px;
+}
+
+.todo-generator-add:hover {
+  background: #ccc;
+  cursor: pointer;
 }
