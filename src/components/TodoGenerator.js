@@ -13,7 +13,7 @@ class TodoGenerator extends Component {
         this.setState(() => ({text: event.target.value}))
     }
 
-    onClick = (event) => {
+    onSubmit = (event) => {
         event.preventDefault()
 
         const id = uuid()
@@ -27,10 +27,10 @@ class TodoGenerator extends Component {
 
     render() {
         return (
-            <form className="todo-generator">
+            <form className="todo-generator" onSubmit={this.onSubmit}>
                 <input className="todo-generator-text" type="text" placeholder="Input a new todo here..." 
-                    value={this.state.text} onChange={this.onChange} />
-                <input className="todo-generator-add" type="submit" value="Add" onClick={this.onClick} />
+                    value={this.state.text} onChange={this.onChange} required />
+                <input className="todo-generator-add" type="submit" value="Add" />
             </form>
         )
     }
