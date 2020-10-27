@@ -27,6 +27,10 @@ code {
   width: 300px;
 }
 
+.todo-item-text-done {
+  text-decoration-line: line-through;
+}
+
 .todo-item-text:hover {
   background: white;
   border: none;

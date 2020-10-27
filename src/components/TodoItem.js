@@ -6,10 +6,19 @@ class TodoItem extends Component {
         this.state = {done: false}
     }
 
+    onClick = () => {
+        this.setState(() => ({done: !this.state.done}))
+    }
+
     render() {
+        let todoItemTextClassName = 'todo-item-text'
+        todoItemTextClassName += (this.state.done)
+            ? ' todo-item-text-done'
+            : ''
+
         return (
             <li className="todo-item">
-                <button className="todo-item-text">{this.props.text}</button>
+                <button className={todoItemTextClassName} onClick={this.onClick}>{this.props.text}</button>
                 <button className="todo-item-close">x</button>
             </li>
         )
