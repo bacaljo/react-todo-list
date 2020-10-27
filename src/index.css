@@ -44,3 +44,14 @@ code {
   font-size: 16px;
   padding: 10px 20px;
 }
+
+.todo-group {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.todo-list {
+  padding: 20px;
+}
