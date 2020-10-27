@@ -1,11 +1,11 @@
 import './App.css';
-import TodoItem from './components/TodoItem'
+import TodoGroup from './components/TodoGroup'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TodoItem text={'Todo Item 1'} />
+        <TodoGroup />
       </header>
     </div>
   );
