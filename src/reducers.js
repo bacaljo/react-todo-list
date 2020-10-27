@@ -9,7 +9,7 @@ const todoList = (state = [], action) => {
         state.splice(index, 1)
     }
 
-    return null
+    return state
 }
 
 export default combineReducers({todoList})
