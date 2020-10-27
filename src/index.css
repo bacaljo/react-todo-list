@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.todo-item {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item-text {
+  background: white;
+  border: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: left;
+  width: 300px;
+}
+
+.todo-item-text:hover {
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item-close {
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
