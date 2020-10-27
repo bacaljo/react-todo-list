@@ -9,6 +9,12 @@ class TodoItem extends Component {
     onClick = () => {
         this.setState(() => ({done: !this.state.done}))
     }
+    
+    onDelete = () => {
+        const id = this.props.id
+
+        this.props.deleteTodoItem(id);
+    }
 
     render() {
         let todoItemTextClassName = 'todo-item-text'
@@ -19,7 +25,7 @@ class TodoItem extends Component {
         return (
             <li className="todo-item">
                 <button className={todoItemTextClassName} onClick={this.onClick}>{this.props.text}</button>
-                <button className="todo-item-close">x</button>
+                <button className="todo-item-close" onClick={this.onDelete}>x</button>
             </li>
         )
     }

@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TodoGroup />
+        <TodoGroup todoList={[{id: 1234, text: 'This is my first task'}]} />
       </header>
     </div>
   );
