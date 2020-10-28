@@ -3,13 +3,7 @@ import {ADD_TODO_ITEM, DELETE_TODO_ITEM, TOGGLE_TODO_ITEM_STATE} from './actions
 
 const todoList = (state = [], action) => {
     if (action.type === DELETE_TODO_ITEM) {
-        const todoItem = state.find(todoItem => todoItem.id === action.payload)
-        const index = state.indexOf(todoItem)
-
-        let newState = state.slice()
-        newState.splice(index, 1)
-        
-        return newState
+        return state.filter(todoItem => todoItem.id != action.payload)
     } else if (action.type === ADD_TODO_ITEM) {
         return [...state, action.payload]
     } else if (action.type === TOGGLE_TODO_ITEM_STATE) {
