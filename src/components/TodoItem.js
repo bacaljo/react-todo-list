@@ -3,22 +3,23 @@ import React, {Component} from 'react'
 class TodoItem extends Component {
     constructor(props) {
         super(props)
-        this.state = {done: false}
     }
 
     onClick = () => {
-        this.setState(() => ({done: !this.state.done}))
+        const id = this.props.id
+        
+        this.props.toggleTodoItemState(id)
     }
     
     onDelete = () => {
         const id = this.props.id
 
-        this.props.deleteTodoItem(id);
+        this.props.deleteTodoItem(id)
     }
 
     render() {
         let todoItemTextClassName = 'todo-item-text'
-        todoItemTextClassName += (this.state.done)
+        todoItemTextClassName += (this.props.done)
             ? ' todo-item-text-done'
             : ''
 
