@@ -18,10 +18,7 @@ class TodoItem extends Component {
     }
 
     render() {
-        let todoItemTextClassName = 'todo-item-text'
-        todoItemTextClassName += (this.props.done)
-            ? ' todo-item-text-done'
-            : ''
+        const todoItemTextClassName = 'todo-item-text' + (this.props.done ? ' todo-item-text-done' : '')
 
         return (
             <li className="todo-item">
